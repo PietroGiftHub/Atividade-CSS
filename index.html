@@ -33,47 +33,179 @@
             <h3>Exemplo:</h3>
 
 
-            <li>Primeiro item da lista</li>
-            <li>Segundo item da lista</li>
-
-            <img src="./Captura de tela 2025-08-18 223853.png" alt="Listas ordenadas para exemplo da cascata">
+            <img src="./Cascata2.png" alt="Listas ordenadas para exemplo da cascata">
 
             <p>Perceba que há duas listas não ordenadas no css, cada uma com uma cor diferente, porém a
                 <strong>prioridade
-                    de cor é da ultima!</strong></p>
+                    de cor é da ultima!</strong>
+            </p>
 
         </div>
 
-            <hr>
+        <hr>
 
-        <h2>Especificidade</h2>
+        <div>
 
-        <p>A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de seletores, sendo eles seletor pela <strong>Tag</strong> <strong>Id</strong> <strong>Class</strong></p>
+            <h2>Especificidade</h2>
 
-       <p>A seleção pela TAG é a mais simples e com menor peso</p>
-        <img src="" alt="">
+            <p>A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais
+                relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na
+                composição de diferentes tipos de seletores, sendo eles seletor pela <strong>Tag,</strong>
+                <strong>Id e</strong> <strong>Class</strong>
+            </p>
 
-        <p>O peso pela tag so tem 1 de "relevancia"</p>
+        </div>
+
+
+        <div>
+
+            <p>A seleção pela TAG é a mais simples e com menor peso</p>
+            <p>exemplo: </p>
+            <h3>Este H3 é pela Tag</h3>
+            <img src="./FotoTag.png" alt="Exemplo de seleção pela TAG">
+
+            <p>Perceba que o h3 pela Tag só possui 1 de peso o que o torna o mais "fraco" dentre os 3 </p>
+
+        </div>
 
         <hr>
 
-        <p>A seleção pela ID é bem mais </p>
-        <img src="" alt="">
+        <div>
 
-        <p>O peso pelo ID so tem 100 de "relevancia"</p>
+            <p>A seleção pela CLASS é mais forte tendo 10 de peso</p>
+            <p>exemplo: </p>
+            <h3 class="Titulo">Este H3 é pelo Class</h3>
+            <img src="./Class.png" alt="Exemplo de seleção pelo Class">
+            <p>Perceba que o h3 pelo Class possui 10 de peso o que o torna o mais forte do que a Tag </p>
+
+        </div>
 
         <hr>
 
-        <p>A seleção pela CLASS é bem mais </p>
-        <img src="" alt="">
+        <div>
 
-        <p>O peso pela CLASS so tem 1 de "relevancia"</p>
+            <p>A seleção pela ID é a mais forte tendo 100 de peso</p>
+            <p>exemplo: </p>
+            <h3 id="Forte">Este H3 é pelo Id</h3>
+            <img src="./ID.png" alt="Exemplo de seleção pelo ID">
+            <p>Perceba que o h3 pelo ID possui 100 de peso o que o torna o mais forte dentre os 3 </p>
+
+        </div>
+
+        <hr>
+
+        <h2>Combinadores</h2>
+        <p>Como o nome sugere são combinaçoes entre seletores</p>
+        <p>exemplo com h1</p>
+
+        <div class="comb">
+            <h1>Este é um exemplo de combinador</h1>
+
+            <div>
+                <h1>Este é outro h1</h1>
+            </div>
+
+            <h1>Filho da div</h1>
+        </div>
 
 
 
-        
 
-    </main>
-    </body>
 
-    </html>
+        <img src="./Combinador.png" alt="Exemplo de combinadores">
+
+        <p>No caso o combiandor é <strong>comb + h1</strong></p>
+
+        <p>Perceba que o seletor de Especificidade agora é 11 isso porque junta-se a tag com o class. O outro h1 se
+            estiver dentro da div ele tambem vai ficar verde se estiver fora a sua cor ou qualquer outra estilização é
+            anulada. </p>
+
+        <hr>
+
+        <h2>Regra da mae e filha</h2>
+        <p>Se o "h1" estiver com um indicativo de maior (>) ele esta dizendo que ele é filho da div </p>
+        <p>exemplo: </p>
+
+        <h4>COMB > H1</h4>
+
+        <p>Perceba que o "Filho da div recebeu uma cor, já o "Este e outro h1" NÃO recebeu a cor porque é neto e não
+            filho da div que esta com o class.</p>
+
+        <img src="./Filho.png" alt="Filho de uma div">
+
+        <hr>
+
+        <h2>Estilizando o anterior</h2>
+
+        <h4>H1 + H1</h4>
+
+        <p>Qunado usar essa tag voce esta dizendo que quer estilizar o h1 que tem um outro h1 antes dele</p>
+
+        <p>exemplo:</p>
+
+        <h1>Primiero</h1>
+        <h1>Segundo</h1>
+        <h1>Terceiro</h1>
+
+        <p>Perceba que apenas o primeiro nao foi estilizado! isso porque não tem outro h1 antes dele.</p>
+        <p>Isso vale para qualquer tag nao apenas h1</p>
+
+        <hr>
+
+        <h2> pseudo-classes</h2>
+
+        <p> pseudo-classes são "falsos elmentos" onde basicamnete voce consegue criar um combinador sem criar uma class
+            para uma tag especifica quase como se fosse um atalho</p>
+
+        <p>Exemplo: </p>
+
+        <div class="marcio">
+            <h1>Primeiro filho</h1>
+            <h1>Segundo filho</h1>
+            <h1>terceiro filho</h1>
+
+            <img src="./EscolhaFilho.png" alt="Selecionando o filho">
+        </div>
+
+
+        <hr>
+
+
+        <h2>Display-block</h2>
+        <p>Há varios elementos que tem diplay block como nav, header, div etc...</p>
+        <p><strong>SUA PRINCIPAL CARACTERISTICA É QUE ELE OCUPA TODA A PAGINA</strong> Quando o limite da tela é
+            quebrado ele pula pra linha de baixo.</p>
+        <ul>
+            <li>widht</li>
+            <li>height</li>
+            <li>padding</li>
+            <li>margin</li>
+            <li>border</li>
+        </ul>
+
+        <p>funcionam por padrão com display-block</p>
+
+        <hr>
+
+        <h2>Display-inline</h2>
+        <p>Todos os elemntos que tem Display-inline usam apenas o espaço que presicam sem usar a tela toda, essa é a
+            pricipal diferença entre os 2</p>
+        <p>Muitos elementos usam o display inline principalmente ancoras de links por isso é necessario usar "br" para
+            separa-los individualmente.</p>
+        <ul>
+            <li>padding</li>
+            <li>margin</li>
+            <li>border</li>
+        </ul>
+
+        <p>widht e height não funcionam no display inline</p>
+        <p>Além disso padding, margin e border so funcionam na horizontal</p>
+
+        <hr>
+
+        <h2>Box model</h2>
+
+</main>
+</body>
+
+</html>

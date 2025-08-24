@@ -1,7 +1,52 @@
 
-li {
-    color: blue;
+
+
+h3 {
+    color: red;
 }
+
+
+
+.Titulo {
+    color: rgb(15, 247, 15);
+}
+
+
+
+#Forte {
+    color: orange
+}
+
+
+
+.comb h1 {
+    color: green;
+}
+
+
+.comb > h1 {
+    color: navy;
+}
+
+
+h1 + h1 {
+    color: rgb(253, 11, 241);
+}
+
+
+
+.marcio h1:first-child {
+    color : palevioletred
+}
+
+.marcio h1:last-child {
+    color : rgb(0, 255, 255)
+}
+
+.marcio h1:nth-child(2) {
+    color : rgb(75, 206, 9)
+}
+
 
 
 
