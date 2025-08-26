@@ -47,8 +47,12 @@ h1 + h1 {
     color : rgb(75, 206, 9)
 }
 
-span{
-    color: darkred;
+mark {
+    color: rgb(0, 0, 0)
+}
+
+.margin {
+    color: black
 }
 
 
