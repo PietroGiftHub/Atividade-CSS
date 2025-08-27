@@ -14,13 +14,22 @@
         <div>
             <header>
                 <h1>Conteudo novo</h1>
+                <a href="#a1">Cascata</a> <br>
+                <a href="#a2">Especificidade</a> <br>
+                <a href="#a3">Combinadores</a> <br>
+                <a href="#a4">Regra da mae e filha</a> <br>
+                <a href="#a5">Estilizando o anterior</a> <br>
+                <a href="#a6">pseudo-classes</a> <br>
+                <a href="#a7">Display-block</a> <br>
+                <a href="#a8">Display-inline</a> <br>
+                <a href="#a9">Box model</a> <br>
+                <a href="#a10">Sufixos fisicos</a> <br>
+                <a href="#a11">box-sizing: border-box</a>
             </header>
-        </div>
 
-
-        <div>
-            <h2>Regra da cascata</h2>
             <hr>
+           <h2 id="a1">Cascata</h2>
+           
 
             <p>Quando existe mais do que um estilo num documento HTML, estes funcionam em cascata numa folha de estilo
                 virtual
@@ -45,14 +54,15 @@
         <hr>
 
         <div>
-
-            <h2>Especificidade</h2>
+            
+            <h2 id="a2">Especificidade</h2>
 
             <p>A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais
                 relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na
                 composição de diferentes tipos de seletores, sendo eles seletor pela <strong>Tag,</strong>
                 <strong>Id e</strong> <strong>Class</strong>
             </p>
+       
 
         </div>
 
@@ -94,7 +104,7 @@
 
         <hr>
 
-        <h2>Combinadores</h2>
+        <h2 id="a3">Combinadores</h2>
         <p>Como o nome sugere são combinaçoes entre seletores</p>
         <p>exemplo com h1</p>
 
@@ -112,52 +122,56 @@
 
 
 
-        <img src="./Combinador.png" alt="Exemplo de combinadores">
+        <div>
+            <img src="./Combinador.png" alt="Exemplo de combinadores">
 
-        <p>No caso o combiandor é <strong>comb + h1</strong></p>
+            <p>No caso o combiandor é <strong>comb + h1</strong></p>
 
-        <p>Perceba que o seletor de Especificidade agora é 11 isso porque junta-se a tag com o class. O outro h1 se
-            estiver dentro da div ele tambem vai ficar verde se estiver fora a sua cor ou qualquer outra estilização é
-            anulada. </p>
+            <p>Perceba que o seletor de Especificidade agora é 11 isso porque junta-se a tag com o class. O outro h1 se
+                estiver dentro da div ele tambem vai ficar verde se estiver fora a sua cor ou qualquer outra estilização
+                é
+                anulada. </p>
 
-        <hr>
+            <hr>
 
-        <h2>Regra da mae e filha</h2>
-        <p>Se o "h1" estiver com um indicativo de maior (>) ele esta dizendo que ele é filho da div </p>
-        <p>exemplo: </p>
+            <h2 id="a4">Regra da mae e filha</h2>
+            <p>Se o "h1" estiver com um indicativo de maior (>) ele esta dizendo que ele é filho da div </p>
+            <p>exemplo: </p>
 
-        <h4>COMB > H1</h4>
+            <h4>COMB > H1</h4>
 
-        <p>Perceba que o "Filho da div recebeu uma cor, já o "Este e outro h1" NÃO recebeu a cor porque é neto e não
-            filho da div que esta com o class.</p>
+            <p>Perceba que o "Filho da div recebeu uma cor, já o "Este e outro h1" NÃO recebeu a cor porque é neto e não
+                filho da div que esta com o class.</p>
 
-        <img src="./Filho.png" alt="Filho de uma div">
+            <img src="./Filho.png" alt="Filho de uma div">
 
-        <hr>
+            <hr>
 
-        <h2>Estilizando o anterior</h2>
+           <h2 id="a5">Estilizando o anterior</h2>
 
-        <h4>H1 + H1</h4>
+            <h4>H1 + H1</h4>
 
-        <p>Qunado usar essa tag voce esta dizendo que quer estilizar o h1 que tem um outro h1 antes dele</p>
+            <p>Qunado usar essa tag voce esta dizendo que quer estilizar o h1 que tem um outro h1 antes dele</p>
 
-        <p>exemplo:</p>
+            <p>exemplo:</p>
 
-        <h1>Primiero</h1>
-        <h1>Segundo</h1>
-        <h1>Terceiro</h1>
+            <h1>Primiero</h1>
+            <h1>Segundo</h1>
+            <h1>Terceiro</h1>
 
-        <p>Perceba que apenas o primeiro nao foi estilizado! isso porque não tem outro h1 antes dele.</p>
-        <p>Isso vale para qualquer tag nao apenas h1</p>
+            <p>Perceba que apenas o primeiro nao foi estilizado! isso porque não tem outro h1 antes dele.</p>
+            <p>Isso vale para qualquer tag nao apenas h1</p>
 
-        <hr>
+            <hr>
 
-        <h2> pseudo-classes</h2>
+            <h2 id="a6">pseudo-classes</h2>
 
-        <p> pseudo-classes são "falsos elmentos" onde basicamnete voce consegue criar um combinador sem criar uma class
-            para uma tag especifica quase como se fosse um atalho</p>
+            <p> pseudo-classes são "falsos elmentos" onde basicamnete voce consegue criar um combinador sem criar uma
+                class
+                para uma tag especifica quase como se fosse um atalho</p>
 
-        <p>Exemplo: </p>
+            <p>Exemplo: </p>
+        </div>
 
         <div class="marcio">
             <h1>Primeiro filho</h1>
@@ -171,99 +185,210 @@
         <hr>
 
 
-        <h2>Display-block</h2>
-        <p>Há varios elementos que tem diplay block como nav, header, div etc...</p>
-        <p><strong>SUA PRINCIPAL CARACTERISTICA É QUE ELE OCUPA TODA A PAGINA</strong> Quando o limite da tela é
-            quebrado ele pula pra linha de baixo.</p>
-        <ul>
-            <li>widht</li>
-            <li>height</li>
-            <li>padding</li>
-            <li>margin</li>
-            <li>border</li>
-        </ul>
+        <div>
+            <h2 id="a7">Display-block</h2>
+            <p>Há varios elementos que tem diplay block como nav, header, div etc...</p>
+            <p><strong>SUA PRINCIPAL CARACTERISTICA É QUE ELE OCUPA TODA A PAGINA</strong> Quando o limite da tela é
+                quebrado ele pula pra linha de baixo.</p>
+            <ul>
+                <li>widht</li>
+                <li>height</li>
+                <li>padding</li>
+                <li>margin</li>
+                <li>border</li>
+            </ul>
+            <p>funcionam por padrão com display-block</p>
+        </div>
 
-        <p>funcionam por padrão com display-block</p>
 
-        <hr>
-
-        <h2>Display-inline</h2>
-        <p>Todos os elemntos que tem Display-inline usam apenas o espaço que presicam sem usar a tela toda, essa é a
-            pricipal diferença entre os 2</p>
-        <p>Muitos elementos usam o display inline principalmente ancoras de links por isso é necessario usar "br" para
-            separa-los individualmente.</p>
-        <ul>
-            <li>padding</li>
-            <li>margin</li>
-            <li>border</li>
-        </ul>
-
-        <p>widht e height não funcionam no display inline</p>
-        <p>Além disso padding, margin e border so funcionam na horizontal</p>
 
         <hr>
 
-        <h2>Box model</h2>
+        <div>
+            <h2 id="a8">Display-inline</h2>
+            <p>Todos os elemntos que tem Display-inline usam apenas o espaço que presicam sem usar a tela toda, essa é a
+                pricipal diferença entre os 2</p>
+            <p>Muitos elementos usam o display inline principalmente ancoras de links por isso é necessario usar "br"
+                para
+                separa-los individualmente.</p>
+            <ul>
+                <li>padding</li>
+                <li>margin</li>
+                <li>border</li>
+            </ul>
 
-        <p> <strong>Margin</strong>, <strong>padding</strong> e <strong>border</strong> servem para controlar o
-            espaçamento e o contorno dos elementos em um layout de página web</p>
+            <p>widht e height não funcionam no display inline</p>
+            <p>Além disso padding, margin e border so funcionam na horizontal</p>
 
-        <ul>
-            <li>Margin é o espaçamento entre os elementos</li>
-            <li>padding é o espaçamento interno dos elementos</li>
-            <li>border é o contorno dos elementos</li>
-        </ul>
+        </div>
+        <hr>
 
-        <p>No contexto de HTML, "shorthand" (ou propriedade abreviada) não se refere a uma tag ou elemento específico,
-            mas sim a uma técnica utilizada no CSS para escrever o código de forma mais concisa</p>
+        <div>
+            <h2 id="a9">Box model</h2>
 
-        <mark> Veja abaixo todos os exemplos de shorthand do margin, padding e border</mark>
-        <h3 class="margin">shorthands do Margin</h3>
+            <p> <strong>Margin</strong>, <strong>padding</strong> e <strong>border</strong> servem para controlar o
+                espaçamento e o contorno dos elementos em um layout de página web</p>
 
-        <p>Quando queremos colocar a mesma quantidade de valores de todos os lados do margin usa-se apenas um valor:</p>
-        <ul>
-            <li>1 valor = Aplica o mesmo valor para todos os lados: top, right, bottom, left.</li>
-        </ul>
-        <p>Exemplo:</p>
-        <strong>margin: 20px;</strong>
-        <p>Todos os valores serão 20px</p>
+            <ul>
+                <li>Margin é o espaçamento entre os elementos</li>
+                <li>padding é o espaçamento interno dos elementos</li>
+                <li>border é o contorno dos elementos</li>
+            </ul>
+
+            <p>No contexto de HTML, "shorthand" (ou propriedade abreviada) não se refere a uma tag ou elemento
+                específico,
+                mas sim a uma técnica utilizada no CSS para escrever o código de forma mais concisa</p>
+
+            <mark> Veja abaixo todos os exemplos de shorthand do margin, padding e border</mark>
+            <h3 class="margin">shorthands do Margin</h3>
+        </div>
+
+        <div>
+            <p>Quando queremos colocar a mesma quantidade de valores de todos os lados do margin usa-se apenas um valor:
+            </p>
+            <ul>
+                <li>1 valor = Aplica o mesmo valor para todos os lados: top, right, bottom, left.</li>
+            </ul>
+            <p>Exemplo:</p>
+            <strong>margin: 20px;</strong>
+            <p>Todos os valores serão 20px</p>
+
+        </div>
+        <hr>
+
+        <div>
+            <p>Quando queremos colocar a mesma quantidade de valores em apenas dois lados do margin usa-se 2 valores:
+            </p>
+            <ul>
+                <li>valor1 = top e bottom</li>
+                <li>valor2 = right e left</li>
+            </ul>
+            <p>Exemplo:</p>
+            <strong>margin: 20px; 30px;</strong>
+            <p>A parte de cima e de baixo será 20 e a direita e a esquerda será 30</p>
+
+        </div>
+        <hr>
+
+        <div>
+            <p>Quando queremos colocar valores diferentes nos lados do margin usa-se 3 valores:</p>
+            <ul>
+                <li>valor1 = top</li>
+                <li>valor2 = right e left</li>
+                <li>valor3 = bottom</li>
+            </ul>
+            <p>Exemplo:</p>
+            <strong>margin: 20px; 30px; 40px;</strong>
+            <p>O de cima recebe 20, o de baixo recebe 40 e os lados 30</p>
+        </div>
+
+        <hr>
+        <div>
+
+            <p>Quando queremos colocar quantidade de valores diferentes de todos os lados do margin usa-se 4 valores
+                distintos para cada lado:</p>
+            <ul>
+                <li>valor1 = top</li>
+                <li>valor2 = right</li>
+                <li>valor3 = bottom</li>
+                <li>valor4 = left</li>
+            </ul>
+            <p>Exemplo:</p>
+            <strong>margin: 20px; 30px; 40px; 50px;</strong>
+            <p>Todos os lados são diferentes e recebem 20, 30, 40 e 50 respectivamente</p>
+            <hr>
+
+            <mark class="importante"><strong>
+                    <h2>OS VALORES ACIMA VALEM PARA PADDING E BORDER TAMBÉM!!!!!!!!</h2>
+                </strong></mark>
+
+            <p>exemplo: </p>
+
+            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png"
+                alt="Exemplo de box model">
+
+        </div>
+
+        <div>
+            <h2 id="a10">Sufixos fisicos</h2>
+
+            <ul>
+                <li>top Parte superior</li>
+                <li>right Parte direita</li>
+                <li>bottom Parte inferior</li>
+                <li>left Parte esquerda</li>
+            </ul>
+
+            <p>Estes sufixos são os mais tradicionais e definem os lados em direção fixa, ou seja, funcionam
+                independente do
+                idioma ou do layout do texto.</p>
+            <p>Exemplo:</p>
+            <strong>margin: 20px; 30px; 40px; 50px;</strong>
+
+        </div>
+
+        <hr>
+        <div>
+
+            <strong>
+                <h2>Sufixos logicos</h2>
+            </strong>
+
+            <p>Esses se adaptam à direção do texto (LTR ou RTL) e são ideais para projetos multilíngues.</p>
+
+            <ul>
+                <li><strong>block</strong> Afeta os lados verticais (superior e inferior).</li>
+                <li><strong>inline</strong> Afeta os lados horizontais (esquerda e direita). </li>
+                <li><strong>block-start</strong> Refere-se ao início do eixo vertical (normalmente o top).</li>
+                <li><strong>block-end</strong> Refere-se ao fim do eixo vertical (normalmente o bottom).</li>
+                <li><strong>inline-start</strong> Refere-se ao início do eixo horizontal (normalmente o left).</li>
+                <li><strong>inline-end</strong> Refere-se ao fim do eixo horizontal (normalmente o right).</li>
+            </ul>
+        </div>
 
         <hr>
 
-        <p>Quando queremos colocar a mesma quantidade de valores em apenas dois lados do margin usa-se 2 valores:</p>
-        <ul>
-            <li>valor1 = top e bottom</li>
-            <li>valor2 = right e left</li>
-        </ul>
-        <p>Exemplo:</p>
-        <strong>margin: 20px; 30px;</strong>
-        <p>A parte de cima e de baixo será 20 e a direita e a esquerda será 30</p>
+        <div>
+            <h2 id="a11">box-sizing: border-box</h2>
 
-        <hr>
+            <p>É uma regra do CSS que controla como o navegador calcula o tamanho dos elementos.</p>
 
-        <p>Quando queremos colocar valores diferentes nos lados do margin usa-se 3 valores:</p>
-        <ul>
-            <li>valor1 = top</li>
-            <li>valor2 = right e left</li>
-            <li>valor3 = bottom</li>
-        </ul>
-        <p>Exemplo:</p>
-        <strong>margin: 20px; 30px; 40px;</strong>
-        <p>O de cima recebe 20, o de baixo recebe 40 e os lados 30</p>
+            <p>Sem o border-box o navegador vai somar todos os valores que voce colocar no widht, padding e no border
+                por
+                exemplo.</p>
 
-        <hr>
+            <p>exemplo sem box-sizing: </p>
 
-        <p>Quando queremos colocar quantidade de valores diferentes de todos os lados do margin usa-se 4 valores
-            distintos para cada lado:</p>
-        <ul>
-            <li>valor1 = top</li>
-            <li>valor2 = right</li>
-            <li>valor3 = bottom</li>
-            <li>valor4 = left</li>
-        </ul>
-        <p>Exemplo:</p>
-        <strong>margin: 20px; 30px; 40px; 50px;</strong>
-        <p>Todos os lados são diferentes e recebem 20, 30, 40 e 50 respectivamente</p>
+            <ul>
+                <li>widht = 100px</li>
+                <li>padding = 20px</li>
+                <li>border: 5px solid red;</li>
+                <li>background-color: lightcoral;</li>
+                <li>box-sizing: content-box; </li>
+                <li>margin-bottom: 20px;</li>
+            </ul>
+
+            <p>A primeira caixa fica maior que 200px, porque o padding e a borda são somados.</p>
+        </div>
+
+        <div>
+            <p>exemplo com box-sizing: </p>
+
+            <ul>
+                <li>width: 200px;</li>
+                <li>padding: 20px;
+                </li>
+                <li> border: 5px solid green;</li>
+                <li>background-color: lightgreen;</li>
+                <li> box-sizing: border-box;</li>
+            </ul>
+
+            <p>A segunda caixa fica com exatamente 200px, porque o padding e a borda já estão inclusos no tamanho.</p>
+
+        </div>
+
+
+
 
 </main>
 </body>
